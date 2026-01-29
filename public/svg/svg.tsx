@@ -209,3 +209,206 @@ export const SupportIcon: React.FC<svgInterface> = ({ color }) => (
     />
   </svg>
 );
+
+export const BuildingIcon: React.FC<svgInterface> = ({ color }) => (
+  <svg
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V48C64 56.8366 56.8366 64 48 64H16C7.16344 64 0 56.8366 0 48V16Z"
+      fill="url(#paint0_linear_248_3230)"
+    />
+    <path
+      d="M24 45.3337V21.3337C24 20.6264 24.281 19.9481 24.781 19.448C25.2811 18.9479 25.9594 18.667 26.6667 18.667H37.3333C38.0406 18.667 38.7189 18.9479 39.219 19.448C39.719 19.9481 40 20.6264 40 21.3337V45.3337H24Z"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M24.0001 32H21.3334C20.6262 32 19.9479 32.281 19.4478 32.781C18.9477 33.2811 18.6667 33.9594 18.6667 34.6667V42.6667C18.6667 43.3739 18.9477 44.0522 19.4478 44.5523C19.9479 45.0524 20.6262 45.3333 21.3334 45.3333H24.0001"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M40 28H42.6667C43.3739 28 44.0522 28.281 44.5523 28.781C45.0524 29.2811 45.3333 29.9594 45.3333 30.6667V42.6667C45.3333 43.3739 45.0524 44.0522 44.5523 44.5523C44.0522 45.0524 43.3739 45.3333 42.6667 45.3333H40"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M29.3333 24H34.6666"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M29.3333 29.333H34.6666"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M29.3333 34.667H34.6666"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M29.3333 40H34.6666"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_248_3230"
+        x1="32"
+        y1="0"
+        x2="32"
+        y2="64"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#83A7FF" />
+        <stop offset="1" stopColor="#393A9F" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const LightbulbIcon: React.FC<svgInterface> = ({ color }) => (
+  <svg
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V48C64 56.8366 56.8366 64 48 64H16C7.16344 64 0 56.8366 0 48V16Z"
+      fill="url(#paint0_linear_248_3244)"
+    />
+    <path
+      d="M36 34.667C36.2667 33.3337 36.9333 32.4003 38 31.3337C39.3333 30.1337 40 28.4003 40 26.667C40 24.5453 39.1571 22.5104 37.6569 21.0101C36.1566 19.5098 34.1217 18.667 32 18.667C29.8783 18.667 27.8434 19.5098 26.3431 21.0101C24.8429 22.5104 24 24.5453 24 26.667C24 28.0003 24.2667 29.6003 26 31.3337C26.9333 32.267 27.7333 33.3337 28 34.667"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28 40H36"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M29.3333 45.333H34.6666"
+      stroke="white"
+      strokeWidth="2.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_248_3244"
+        x1="32"
+        y1="0"
+        x2="32"
+        y2="64"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#8B5CF6" />
+        <stop offset="1" stopColor="#83A7FF" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const DollarIcon: React.FC<svgInterface> = ({ color }) => (
+  <svg
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 16C0 7.16345 7.16344 0 16 0H47.9965C56.833 0 63.9965 7.16344 63.9965 16V47.9965C63.9965 56.833 56.833 63.9965 47.9965 63.9965H16C7.16345 63.9965 0 56.833 0 47.9965V16Z"
+      fill="url(#paint0_linear_248_4732)"
+    />
+    <path
+      d="M31.9922 18.668V45.3284"
+      stroke="white"
+      strokeWidth="2.66604"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M38.6574 22.668H28.6597C27.4223 22.668 26.2356 23.1595 25.3607 24.0345C24.4857 24.9094 23.9941 26.0962 23.9941 27.3335C23.9941 28.5709 24.4857 29.7576 25.3607 30.6326C26.2356 31.5076 27.4223 31.9991 28.6597 31.9991H35.3248C36.5622 31.9991 37.7489 32.4907 38.6239 33.3656C39.4988 34.2406 39.9904 35.4273 39.9904 36.6647C39.9904 37.9021 39.4988 39.0888 38.6239 39.9637C37.7489 40.8387 36.5622 41.3303 35.3248 41.3303H23.9941"
+      stroke="white"
+      strokeWidth="2.66604"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_248_4732"
+        x1="31.9982"
+        y1="0"
+        x2="31.9982"
+        y2="63.9965"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#393A9F" />
+        <stop offset="1" stopColor="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const MusicIcon: React.FC<svgInterface> = ({ color }) => (
+  <svg
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 16C0 7.16345 7.16344 0 16 0H47.9965C56.833 0 63.9965 7.16344 63.9965 16V47.9965C63.9965 56.833 56.833 63.9965 47.9965 63.9965H16C7.16345 63.9965 0 56.833 0 47.9965V16Z"
+      fill="url(#paint0_linear_248_4741)"
+    />
+    <path
+      d="M19.9951 34.6652H23.9942C24.7013 34.6652 25.3794 34.9461 25.8794 35.446C26.3793 35.946 26.6602 36.6241 26.6602 37.3312V41.3303C26.6602 42.0374 26.3793 42.7155 25.8794 43.2155C25.3794 43.7154 24.7013 43.9963 23.9942 43.9963H22.6612C21.9541 43.9963 21.276 43.7154 20.776 43.2155C20.276 42.7155 19.9951 42.0374 19.9951 41.3303V31.9991C19.9951 28.8173 21.2591 25.7658 23.509 23.5158C25.7589 21.2659 28.8104 20.002 31.9923 20.002C35.1742 20.002 38.2257 21.2659 40.4756 23.5158C42.7255 25.7658 43.9895 28.8173 43.9895 31.9991V41.3303C43.9895 42.0374 43.7086 42.7155 43.2086 43.2155C42.7086 43.7154 42.0305 43.9963 41.3234 43.9963H39.9904C39.2833 43.9963 38.6052 43.7154 38.1052 43.2155C37.6053 42.7155 37.3244 42.0374 37.3244 41.3303V37.3312C37.3244 36.6241 37.6053 35.946 38.1052 35.446C38.6052 34.9461 39.2833 34.6652 39.9904 34.6652H43.9895"
+      stroke="white"
+      strokeWidth="2.66604"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_248_4741"
+        x1="31.9982"
+        y1="0"
+        x2="31.9982"
+        y2="63.9965"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#83A7FF" />
+        <stop offset="1" stopColor="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
