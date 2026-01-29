@@ -122,7 +122,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#FAFAFA] border-t border-gray-100">
+    <footer className="w-full bg-[#FAFAFA] dark:bg-[#09090B] border-t border-gray-100 dark:border-[#1a1a1a]">
       {/* Main Footer Content */}
       <div className="max-w-[1200px] mx-auto">
         <div className="px-6 py-16">
@@ -137,14 +137,14 @@ export default function Footer() {
                   height={32}
                 />
                 <span
-                  className="text-[#1a1a1a] text-xl font-semibold tracking-tight"
+                  className="text-[#1a1a1a] dark:text-white text-xl font-semibold tracking-tight"
                   style={{ fontFamily: "General Sans, sans-serif" }}
                 >
                   StelloPay
                 </span>
               </Link>
               <p
-                className="text-[#666666] text-sm leading-relaxed mb-6 max-w-[280px]"
+                className="text-[#666666] dark:text-[#a1a1aa] text-sm leading-relaxed mb-6 max-w-[280px]"
                 style={{ fontFamily: "General Sans, sans-serif" }}
               >
                 Simplifying crypto payments for businesses. Built on the Stellar blockchain for instant, secure, and affordable global transactions.
@@ -158,7 +158,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#666666] hover:text-[#7C3AED] hover:border-[#7C3AED] transition-all duration-200"
+                    className="w-10 h-10 rounded-full border border-gray-200 dark:border-[#27272a] dark:bg-[#18181b] flex items-center justify-center text-[#666666] dark:text-[#a1a1aa] hover:text-[#7C3AED] hover:border-[#7C3AED] dark:hover:text-[#a78bfa] dark:hover:border-[#a78bfa] transition-all duration-200"
                     aria-label={social.label}
                   >
                     <social.icon />
@@ -171,7 +171,7 @@ export default function Footer() {
             {Object.entries(footerLinks).map(([category, links]) => (
               <div key={category}>
                 <h4
-                  className="text-[#1a1a1a] font-semibold text-sm mb-4 tracking-wide"
+                  className="text-[#1a1a1a] dark:text-white font-semibold text-sm mb-4 tracking-wide"
                   style={{ fontFamily: "General Sans, sans-serif" }}
                 >
                   {category}
@@ -181,7 +181,7 @@ export default function Footer() {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-[#666666] text-sm hover:text-[#7C3AED] transition-colors duration-200"
+                        className="text-[#666666] dark:text-[#a1a1aa] text-sm hover:text-[#7C3AED] dark:hover:text-[#a78bfa] transition-colors duration-200"
                         style={{ fontFamily: "General Sans, sans-serif" }}
                       >
                         {link.label}
@@ -197,13 +197,13 @@ export default function Footer() {
           <div className="mt-16 pt-12">
             <div className="max-w-[600px] mx-auto text-center">
               <h3
-                className="text-[#1a1a1a] text-2xl font-semibold mb-3"
+                className="text-[#1a1a1a] dark:text-white text-2xl font-semibold mb-3"
                 style={{ fontFamily: "General Sans, sans-serif" }}
               >
                 Stay updated with StelloPay
               </h3>
               <p
-                className="text-[#666666] text-sm mb-6"
+                className="text-[#666666] dark:text-[#a1a1aa] text-sm mb-6"
                 style={{ fontFamily: "General Sans, sans-serif" }}
               >
                 Get the latest news, updates, and tips delivered straight to your inbox.
@@ -215,7 +215,7 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
-                  className="w-full sm:w-[320px] h-12 px-4 rounded-lg border border-gray-200 bg-transparent text-[#1a1a1a] text-sm placeholder:text-[#999999] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/20 focus:border-[#7C3AED] transition-all duration-200"
+                  className="w-full sm:w-[320px] h-12 px-4 rounded-lg border border-gray-200 dark:border-[#27272a] bg-transparent dark:bg-[#18181b] text-[#1a1a1a] dark:text-white text-sm placeholder:text-[#999999] dark:placeholder:text-[#71717a] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/20 dark:focus:ring-[#a78bfa]/20 focus:border-[#7C3AED] dark:focus:border-[#a78bfa] transition-all duration-200"
                   style={{ fontFamily: "General Sans, sans-serif" }}
                 />
                 <button
@@ -231,11 +231,11 @@ export default function Footer() {
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200">
+        <div className="border-t border-gray-200 dark:border-[#1a1a1a]">
           <div className="max-w-[1200px] mx-auto px-6 py-6">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p
-                className="text-[#666666] text-sm"
+                className="text-[#666666] dark:text-[#a1a1aa] text-sm"
                 style={{ fontFamily: "General Sans, sans-serif" }}
               >
                 © 2026 StelloPay. All rights reserved.
@@ -244,21 +244,21 @@ export default function Footer() {
               <div className="flex items-center gap-6">
                 <Link
                   href="/privacy"
-                  className="text-[#666666] text-sm hover:text-[#7C3AED] transition-colors duration-200"
+                  className="text-[#666666] dark:text-[#a1a1aa] text-sm hover:text-[#7C3AED] dark:hover:text-[#a78bfa] transition-colors duration-200"
                   style={{ fontFamily: "General Sans, sans-serif" }}
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/terms"
-                  className="text-[#666666] text-sm hover:text-[#7C3AED] transition-colors duration-200"
+                  className="text-[#666666] dark:text-[#a1a1aa] text-sm hover:text-[#7C3AED] dark:hover:text-[#a78bfa] transition-colors duration-200"
                   style={{ fontFamily: "General Sans, sans-serif" }}
                 >
                   Terms of Service
                 </Link>
                 <Link
                   href="/cookies"
-                  className="text-[#666666] text-sm hover:text-[#7C3AED] transition-colors duration-200"
+                  className="text-[#666666] dark:text-[#a1a1aa] text-sm hover:text-[#7C3AED] dark:hover:text-[#a78bfa] transition-colors duration-200"
                   style={{ fontFamily: "General Sans, sans-serif" }}
                 >
                   Cookie Policy
