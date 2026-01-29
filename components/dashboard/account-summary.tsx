@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Copy } from "lucide-react";
 import { copyToClipboardWithTimeout } from "@/utils/clipboardUtils";
 import { AccountSummaryCardSkeleton } from "@/components/ui/card-skeleton";
 import { Skeleton } from "@/components/ui/skeleton";
