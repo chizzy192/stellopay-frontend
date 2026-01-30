@@ -1,8 +1,24 @@
+import React from "react";
+
 // Landing page component props
 export interface FeatureCardProps {
   imageSrc: string;
   title: string;
   description: string;
+}
+
+export interface FeatureGridItem {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export interface FeaturesGridProps {
+  className?: string;
+export interface StatCardItem {
+  value: string;
+  label: string;
 }
 
 export const HeroContent = {
