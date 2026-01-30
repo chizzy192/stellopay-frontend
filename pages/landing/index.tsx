@@ -23,7 +23,7 @@ import FeaturesGrid from "@/components/landing/features-grid";
 export default function LandingPage() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* Removed: <DashBoard /> - this shouldn't be on the landing page */}
       <Hero />
       <section className="bg-[#F5F3FF] dark:bg-[#0F0A14] py-12 md:py-16 px-4">
