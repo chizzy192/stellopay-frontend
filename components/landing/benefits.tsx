@@ -1,25 +1,26 @@
-import { FeesIcon, BankingIcon, SupportIcon } from "@/public/svg/svg";
+import { TransactionIcon } from "@/public/svg/svg";
+import { Shield, CreditCard, HeadphonesIcon } from "lucide-react";
 
 const benefits = [
   {
     title: "Low Fees",
     description:
       "Reduce payroll costs with blockchain-powered transactions that eliminate excessive banking fees and hidden charges. Stellopay ensures more of your money goes where it matters.",
-    icon: <FeesIcon color="black" />,
+    icon: <Shield className="w-6 h-6" color="black" />,
     featured: true,
   },
   {
     title: "Ease of Use",
     description:
       "Our intuitive platform simplifies payroll management with seamless automation, real-time tracking, and effortless navigation—no technical expertise required.",
-    icon: <BankingIcon color="black" />,
+    icon: <CreditCard className="w-6 h-6" color="black" />,
     featured: false,
   },
   {
     title: "Reliable Customer Support",
     description:
       "Get dedicated assistance whenever you need it. Our expert support team is always available to help with transactions, troubleshooting, and guidance.",
-    icon: <SupportIcon color="black" />,
+    icon: <HeadphonesIcon className="w-6 h-6" color="black" />,
     featured: false,
   },
 ];

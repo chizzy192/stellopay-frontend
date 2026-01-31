@@ -12,23 +12,21 @@ interface NavbarProps {
 }
 
 export default function Navbar({ walletAddress, isLoadingWallet = false, isLoadingNetwork = false }: NavbarProps) {
+  return null;
+  /*
   return (
     <>
       <nav className="w-full h-[75px] border-b border-[#1A1A1A] px-4 md:px-10">
         <div className="h-full flex items-center justify-between gap-4 flex-wrap">
-          {/* Search input */}
           <input
             type="text"
             placeholder="Search here..."
             className="bg-transparent border border-[#242428] text-white px-4 py-2 rounded-md w-full sm:w-1/3 md:w-[400px] placeholder:text-[#E5E5E5] outline-none focus-within:ring-1"
           />
 
-          {/* Icons and Avatar */}
           <div className="flex items-center gap-4 mt-2 sm:mt-0">
-            {/* Network Switcher */}
             <NetworkSwitcher variant="dashboard" isLoading={isLoadingNetwork} />
 
-            {/* Wallet Address */}
             {isLoadingWallet ? (
               <Skeleton className="w-32 h-6 rounded-md" />
             ) : walletAddress ? (
@@ -50,7 +48,6 @@ export default function Navbar({ walletAddress, isLoadingWallet = false, isLoadi
               <HelpCircle className="w-10 h-10 sm:w-6 sm:h-6 text-[#6e6d6e] hover:text-[#FFFFFF] transition-colors" />
             </div>
 
-            {/* Avatar */}
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-pink-500 relative">
               <img
                 src="/avatar.jpg"
@@ -64,4 +61,5 @@ export default function Navbar({ walletAddress, isLoadingWallet = false, isLoadi
       </nav>
     </>
   );
+  */
 }

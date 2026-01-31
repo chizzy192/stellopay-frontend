@@ -94,63 +94,64 @@ export function QuickActions({
   return (
     <section
       className={cn(
-        "rounded-xl border p-4 md:p-6",
-        "bg-white dark:bg-[#0D0D0D80] border-[#E5E5E5] dark:border-[#2D2D2D]"
+        "rounded-2xl border p-6 transition-all",
+        "bg-white dark:bg-[#111111] border-zinc-200 dark:border-zinc-800 shadow-sm"
       )}
     >
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-[#09090B] dark:text-[#E5E5E5]">
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-xl font-bold text-zinc-900 dark:text-white">
           Quick Actions
         </h2>
-        {customizeHref ? (
-          <Link
-            href={customizeHref}
-            className="text-sm font-medium text-[#52525B] dark:text-[#A3A3A3] hover:text-[#09090B] dark:hover:text-[#E5E5E5] transition-colors"
-          >
-            Customize
-          </Link>
-        ) : (
-          <button
-            type="button"
-            onClick={onCustomize}
-            className="text-sm font-medium text-[#52525B] dark:text-[#A3A3A3] hover:text-[#09090B] dark:hover:text-[#E5E5E5] transition-colors"
-          >
-            Customize
-          </button>
-        )}
+        <div className="flex items-center gap-4">
+          {customizeHref ? (
+            <Link
+              href={customizeHref}
+              className="text-sm font-bold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              Customize
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={onCustomize}
+              className="text-sm font-bold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              Customize
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* Action cards - wrap on small, horizontal scroll on medium if needed */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 overflow-x-auto pb-2 -mx-1 px-1 md:overflow-visible md:mx-0 md:px-0">
+      {/* Action cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
         {actions.map((action, index) => {
           const Icon = action.icon;
           const content = (
-            <>
+            <div className="flex items-center gap-4">
               <div
                 className={cn(
-                  "flex items-center justify-center w-10 h-10 rounded-full shrink-0",
+                  "flex items-center justify-center w-12 h-12 rounded-xl shrink-0 transition-transform group-hover:scale-110",
                   action.bgColor,
                   action.iconColor
                 )}
               >
-                <Icon className="h-5 w-5" aria-hidden />
+                <Icon className="h-6 w-6" aria-hidden />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="font-semibold text-[#09090B] dark:text-[#E5E5E5] text-sm truncate">
+                <p className="font-bold text-zinc-900 dark:text-white text-sm truncate">
                   {action.title}
                 </p>
-                <p className="text-xs text-[#52525B] dark:text-[#A3A3A3] truncate mt-0.5">
+                <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400 truncate mt-0.5">
                   {action.subtitle}
                 </p>
               </div>
-            </>
+            </div>
           );
           const cardClass = cn(
-            "flex items-center gap-3 rounded-xl border p-4 min-w-[200px] md:min-w-0",
-            "bg-white dark:bg-[#121212]",
-            action.borderColor,
-            "hover:opacity-90 transition-opacity cursor-pointer touch-manipulation"
+            "group flex flex-col rounded-2xl border p-5 transition-all cursor-pointer",
+            "bg-zinc-50/50 dark:bg-zinc-900/30 border-zinc-100 dark:border-zinc-800/50",
+            "hover:bg-zinc-100 dark:hover:bg-zinc-800/50 hover:shadow-md active:scale-[0.98]"
           );
           if (action.href) {
             return (

@@ -10,9 +10,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const { isSidebarOpen, isMobile } = useSidebar();
 
   return (
-    <div className="relative   min-h-screen">
+    <div className="relative h-screen overflow-hidden">
       <div
-        className={`grid transition-all duration-300 ease-in-out ${
+        className={`grid h-full transition-all duration-300 ease-in-out ${
           isMobile
             ? "grid-cols-1"
             : isSidebarOpen
@@ -24,9 +24,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
         {!isMobile && <SideBar />}
 
         {/* Main content area */}
-        <div className=" relative  min-h-screen">
+        <div className="relative h-full overflow-y-auto overflow-x-hidden flex flex-col scrollbar-hide">
           <Navbar />
-          <main className="flex flex-col">{children}</main>
+          <main className="flex-1 flex flex-col">{children}</main>
         </div>
       </div>
 
