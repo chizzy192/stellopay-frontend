@@ -5,12 +5,11 @@ import BenefitsSection from "@/components/landing/benefits";
 import HowItWorks from "@/components/landing/how-it-works";
 import ValuePropositions from "@/components/landing/value-propositions";
 import GetStartedCTA from "@/components/landing/get-started-cta";
-import HelpCTASection from "@/components/landing/help-cta-section";
+import FAQSection from "@/components/landing/faq-section";
 import { FeaturesIntro } from "@/components/landing/features-intro";
 import { StatsCards } from "@/components/landing/stats-cards";
 import Navbar from "@/components/landing/navbar";
 import EnterpriseSolutionSection from "@/components/landing/enterprise-section";
-import HelpCTASection from "@/components/landing/help-cta-section";
 
 const defaultStats = [
   { value: "$2.5B+", label: "Transaction Volume" },
@@ -34,8 +33,8 @@ export default function LandingPage() {
       <ValuePropositions />
       <EnterpriseSolutionSection />
       <BenefitsSection />
+      <FAQSection />
       <GetStartedCTA />
-      <HelpCTASection />
       <Footer />
     </div>
   );
