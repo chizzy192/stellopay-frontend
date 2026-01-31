@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  TrendUp,
+  TrendingUp,
   DollarSign,
   Activity,
   Wallet,
@@ -27,7 +27,7 @@ const timeRangeOptions = ["Last 7 days", "Last 30 days", "Last 90 days", "This y
 
 const defaultKPIs: KPICardItem[] = [
   {
-    icon: TrendUp,
+    icon: TrendingUp,
     value: "$847.5K",
     label: "Total Volume",
     change: "+12.5%",
@@ -75,36 +75,36 @@ export function AnalyticsInsights({
   return (
     <section
       className={cn(
-        "rounded-xl border p-4 md:p-6",
-        "bg-white dark:bg-[#0D0D0D80] border-[#E5E5E5] dark:border-[#2D2D2D]"
+        "rounded-2xl border p-6 transition-all",
+        "bg-white dark:bg-[#111111] border-zinc-200 dark:border-zinc-800 shadow-sm"
       )}
     >
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <div>
-          <h2 className="text-xl font-bold text-[#09090B] dark:text-[#E5E5E5]">
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-white">
             Analytics & Insights
           </h2>
-          <p className="text-sm text-[#52525B] dark:text-[#A3A3A3] mt-0.5">
+          <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-1">
             Track your payment activity and performance
           </p>
         </div>
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <div className="relative">
             <button
               type="button"
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className={cn(
-                "flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border",
-                "bg-white dark:bg-[#121212] border-[#E5E5E5] dark:border-[#2E2E2E]",
-                "text-[#09090B] dark:text-[#E5E5E5] hover:bg-[#F5F5F5] dark:hover:bg-[#1A1A1A]"
+                "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold border transition-colors",
+                "bg-zinc-50 dark:bg-zinc-900/50 border-zinc-200 dark:border-zinc-800",
+                "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800"
               )}
               aria-expanded={dropdownOpen}
               aria-haspopup="listbox"
               aria-label="Select time range"
             >
               {timeRange}
-              <ChevronDown className="h-4 w-4 shrink-0" />
+              <ChevronDown className="h-4 w-4 shrink-0 text-zinc-400" />
             </button>
             {dropdownOpen && (
               <>
@@ -116,8 +116,8 @@ export function AnalyticsInsights({
                 <ul
                   role="listbox"
                   className={cn(
-                    "absolute top-full left-0 mt-1 min-w-[140px] py-1 rounded-lg border shadow-lg z-20",
-                    "bg-white dark:bg-[#121212] border-[#E5E5E5] dark:border-[#2E2E2E]"
+                    "absolute top-full right-0 mt-2 min-w-[160px] py-1 rounded-xl border shadow-xl z-20 overflow-hidden",
+                    "bg-white dark:bg-[#111111] border-zinc-200 dark:border-zinc-800"
                   )}
                 >
                   {timeRangeOptions.map((option) => (
@@ -130,10 +130,10 @@ export function AnalyticsInsights({
                         setDropdownOpen(false);
                       }}
                       className={cn(
-                        "px-3 py-2 text-sm cursor-pointer transition-colors",
-                        "text-[#09090B] dark:text-[#E5E5E5]",
-                        "hover:bg-[#F5F5F5] dark:hover:bg-[#1A1A1A]",
-                        timeRange === option && "bg-[#F5F5F5] dark:bg-[#1A1A1A]"
+                        "px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors",
+                        "text-zinc-600 dark:text-zinc-400",
+                        "hover:bg-zinc-50 dark:hover:bg-zinc-900/50",
+                        timeRange === option && "bg-zinc-50 dark:bg-zinc-900/50 text-blue-600 dark:text-blue-400"
                       )}
                     >
                       {option}
@@ -143,50 +143,47 @@ export function AnalyticsInsights({
               </>
             )}
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            className="border-[#E5E5E5] dark:border-[#2D2D2D] text-[#09090B] dark:text-[#E5E5E5] hover:bg-[#F5F5F5] dark:hover:bg-[#2D2D2D]"
-            asChild
-          >
-            <Link href={viewAllHref} className="flex items-center gap-1.5">
+          <Link href={viewAllHref}>
+            <button className="h-10 px-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 text-zinc-700 dark:text-zinc-300 text-sm font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors flex items-center gap-2">
               View All
               <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {kpis.map((item, index) => {
           const Icon = item.icon;
           return (
             <div
               key={index}
               className={cn(
-                "rounded-xl border p-4 flex flex-col",
-                "bg-white dark:bg-[#121212] border-[#E5E5E5] dark:border-[#2E2E2E]"
+                "rounded-2xl border p-5 flex flex-col group hover:shadow-md transition-all",
+                "bg-zinc-50/50 dark:bg-zinc-900/30 border-zinc-100 dark:border-zinc-800/50"
               )}
             >
               <div className="flex items-start justify-between gap-2">
                 <div
                   className={cn(
-                    "flex items-center justify-center w-10 h-10 rounded-full shrink-0",
+                    "flex items-center justify-center w-12 h-12 rounded-xl shrink-0 transition-transform group-hover:scale-110",
                     item.iconBg,
                     item.iconColor
                   )}
                 >
-                  <Icon className="h-5 w-5" aria-hidden />
+                  <Icon className="h-6 w-6" aria-hidden />
                 </div>
-                <span className="text-sm font-medium text-[#16A34A] dark:text-[#4ADE80] shrink-0">
-                  {item.change}
-                </span>
+                <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10">
+                  <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                    {item.change}
+                  </span>
+                </div>
               </div>
-              <p className="text-2xl font-bold text-[#09090B] dark:text-[#E5E5E5] mt-3">
+              <p className="text-3xl font-bold text-zinc-900 dark:text-white mt-4 tracking-tight">
                 {item.value}
               </p>
-              <p className="text-sm text-[#52525B] dark:text-[#A3A3A3] mt-0.5">
+              <p className="text-sm font-bold text-zinc-400 dark:text-zinc-500 mt-1 uppercase tracking-wider">
                 {item.label}
               </p>
             </div>

@@ -13,12 +13,12 @@ export const SearchBar = () => {
       <input
         type="text"
         placeholder={isExpanded ? "Search" : ""}
-        className={`border border-[#2D333E] bg-[#0D0D0D] text-sm font-normal text-[#98A2B3] pr-3 py-2 focus:border outline-none focus:border-[#464d5c] w-full ${
+        className={`border border-zinc-200 dark:border-[#2D333E] bg-zinc-50 dark:bg-[#0D0D0D] text-sm font-normal text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-500 dark:placeholder:text-[#98A2B3] pr-3 py-2 focus:border outline-none focus:border-zinc-300 dark:focus:border-[#464d5c] w-full transition-colors ${
           isExpanded ? "pl-10 rounded-sm" : "!px-2 pl-6 rounded-lg"
         }`}
       />
       <div
-        className={`absolute ${isExpanded ? "left-3" : "left-1/2 -translate-x-1/2"} top-1/2 -translate-y-1/2`}
+        className={`absolute ${isExpanded ? "left-3" : "left-1/2 -translate-x-1/2"} top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400`}
       >
         <SearchIcon />
       </div>

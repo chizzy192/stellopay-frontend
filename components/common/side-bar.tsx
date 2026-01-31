@@ -4,14 +4,14 @@ import { SearchBar } from "./search-bar";
 import { NavLink } from "./nav-link";
 import useSidebar from "@/context/sidebar-context";
 import { motion } from "framer-motion";
-import { X, Sidebar } from "lucide-react"; // Import X icon for close button
+import { X, Sidebar } from "lucide-react";
 
 export const SideBar = () => {
   const { isSidebarOpen, setSidebarOpen, isMobile } = useSidebar();
 
   return (
     <motion.aside
-      className={`bg-[#101010] h-full min-h-screen   border border-[#1A1A1A] ${isMobile ? "w-full relative z-50" : ""}`}
+      className={`bg-white dark:bg-[#101010] h-full border-r border-zinc-200 dark:border-[#1A1A1A] transition-colors duration-200 overflow-y-auto overflow-x-hidden scrollbar-hide ${isMobile ? "w-full relative z-50" : ""}`}
       initial={false}
       animate={{
         width: !isMobile && !isSidebarOpen ? "6rem" : "100%",
@@ -19,40 +19,38 @@ export const SideBar = () => {
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <div className="space-y-6 my-9 h-full">
-        {/* Top section with logo and close button */}
         <div className="px-8 py-6 flex justify-between items-center">
-          {/* Left: Sidebar toggle + Logo */}
-          <div className="flex items-center gap-18">
-            {(isSidebarOpen || isMobile) && <StellOpayLogo />}
+          <div className="flex items-center gap-4">
+            {(isSidebarOpen || isMobile) && (
+              <div className="text-zinc-900 dark:text-white transition-colors duration-200">
+                <StellOpayLogo />
+              </div>
+            )}
 
             <button
               onClick={() => setSidebarOpen(!isSidebarOpen)}
-              className="text-white cursor-pointer"
+              className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white cursor-pointer transition-colors"
             >
-              <Sidebar />
+              <Sidebar size={20} />
             </button>
           </div>
 
-          {/* Right: Close button (mobile only) */}
           {isMobile && (
             <button
               onClick={() => setSidebarOpen(false)}
-              className="text-white p-2"
+              className="text-zinc-500 dark:text-zinc-400 p-2"
             >
               <X size={24} />
             </button>
           )}
         </div>
 
-        {/* Search and nav section */}
         <div className="space-y-8 px-4">
-          <hr className="border-gray-800 border-t" />
-          {/* Search bar */}
+          <hr className="border-zinc-200 dark:border-zinc-800 border-t" />
           <div className="w-full flex items-center justify-center">
             <SearchBar />
           </div>
 
-          {/* Nav links */}
           <NavLink />
         </div>
       </div>

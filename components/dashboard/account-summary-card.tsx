@@ -1,0 +1,63 @@
+'use client';
+
+import React from 'react';
+import { HiOutlineArrowTrendingUp, HiOutlineArrowTrendingDown } from "react-icons/hi2";
+import { AccountSummaryCardProps } from './summary-data';
+
+export default function AccountSummaryCard({
+  title,
+  subtitle,
+  value,
+  change,
+  isPositive,
+  icon,
+  iconBgColor,
+  chartColor,
+  chartData
+}: AccountSummaryCardProps) {
+  return (
+    <div className="bg-white dark:bg-[#111111] border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-3">
+          <div className={`w-12 h-12 rounded-xl ${iconBgColor} flex items-center justify-center`}>
+            {icon}
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-zinc-500 dark:text-zinc-400">{title}</h3>
+            <p className="text-xs text-zinc-400 dark:text-zinc-500">{subtitle}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <div className="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">
+          {value}
+        </div>
+        <div className="flex items-center gap-1.5 mt-1">
+          <div className={`flex items-center gap-0.5 px-2 py-0.5 rounded-full text-xs font-semibold ${
+            isPositive 
+              ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10' 
+              : 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10'
+          }`}>
+            {isPositive ? <HiOutlineArrowTrendingUp className="w-3 h-3" /> : <HiOutlineArrowTrendingDown className="w-3 h-3" />}
+            {change.split(' ')[0]}
+          </div>
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">
+            {change.split(' ').slice(1).join(' ')}
+          </span>
+        </div>
+      </div>
+
+      {/* Mini Bar Chart */}
+      <div className="h-12 flex items-end gap-1.5 mt-2">
+        {chartData.map((data, idx) => (
+          <div 
+            key={idx}
+            className={`flex-1 rounded-t-sm ${chartColor} opacity-80 hover:opacity-100 transition-opacity`}
+            style={{ height: `${data.value}%` }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
