@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { transactions as allTransactions } from "@/public/data/mock-data";
 import DashboardHeader from "@/components/dashboard/dashboard-header";
 import AccountSummary from "@/components/dashboard/account-summary";
+import { AnalyticsInsights } from "@/components/dashboard/analytics-insights";
+import { QuickActions } from "@/components/dashboard/quick-actions";
 import ClientAnalyticsView from "@/components/analytics/client-analytics-view";
 import NotificationPanel from "@/components/common/notification-panel";
 import { TransactionsTable } from "@/components/transactions/transactions-table";
@@ -56,6 +58,10 @@ const page = () => {
       <DashboardHeader pageTitle="Dashboard" />
       <main className="px-4 md:px-10 pt-6 pb-8 space-y-6">
         <AccountSummary isLoading={isLoading} />
+
+        <QuickActions />
+
+        <AnalyticsInsights />
 
         <div className="flex flex-col md:flex-row justify-between w-full gap-6">
           <div className="flex-1">
